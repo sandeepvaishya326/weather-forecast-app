@@ -6,7 +6,8 @@ COPY src ./src
 RUN mvn package -DskipTests
 
 # Use JRE 17 for runtime
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre
+
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 COPY public ./public
