@@ -22,6 +22,7 @@ steps:
       "--image", "us-central1-docker.pkg.dev/$PROJECT_ID/weather-app-repo/weather-app:$COMMIT_SHA",
       "--region", "us-central1",
       "--platform=managed",
+      "--timeout=300s",
       "--allow-unauthenticated"
     ]
 
