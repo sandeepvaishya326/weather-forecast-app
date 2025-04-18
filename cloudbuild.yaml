@@ -3,8 +3,8 @@ options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET  # Uses a regional bucket
 steps:
   # Step 1: Build Java application using Maven
-  - name: "maven:3.8.7-openjdk-17"
-    args: ["mvn", "package", "-DskipTests"]
+  - name: "maven:3.8.5-openjdk-17"
+    args: ["mvn", "clean", "package", "-DskipTests"]
 
   # Step 2: Build Docker Image
   - name: "gcr.io/cloud-builders/docker"
